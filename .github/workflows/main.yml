@@ -1,0 +1,23 @@
+on: [push]
+
+jobs:
+  publish_job:
+    runs-on: ubuntu-latest
+    name: Piblishes a file with Pinata.
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Pin
+        id: pin
+        uses: ./ # Uses an action in the root directory
+        with:
+          pinata-api-key: ${{ secrets.API_KEY }}
+          pinata-secret-api-key: ${{ secrets.API_SECRET }}
+          file-to-pin: './package.json'
+      # Use the output from the `pin` step
+      - name: Get the timestamp
+        run: echo "The timestamp of the pin is ${{ steps.pin.outputs.timestamp }}"
+      - name: Get the hash
+        run: echo "The hash of the pin is ${{ steps.pin.outputs.hash }}"
