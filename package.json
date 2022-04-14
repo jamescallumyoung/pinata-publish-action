@@ -2,6 +2,7 @@
   "name": "pinata-publish-action",
   "version": "0.0.1",
   "description": "GitHub Action to pin files to IPFS with Pinata.",
+  "private": true,
   "main": "dist/index.js",
   "scripts": {
     "build": "npm exec ncc build src/index.ts",

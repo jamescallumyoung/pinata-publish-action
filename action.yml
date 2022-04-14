@@ -11,8 +11,12 @@ inputs:
     description: 'Path to the file that you want to pin.'
     required: true
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  hash:
+    description: 'The hash of the pinned file.'
+  pinSize:
+    description: 'The size, in MB, of the pinned hash.'
+  timestamp:
+    description: "The timestamp the hash was added to Pinata's pin queue."
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
