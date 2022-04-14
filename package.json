@@ -1,0 +1,29 @@
+{
+  "name": "pinata-publish-action",
+  "version": "0.0.0",
+  "description": "GitHub Action to pin files to IPFS with Pinata.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm exec ncc build src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamescallumyoung/pinata-publish-action.git"
+  },
+  "author": "James Young <hello@jamesyoung.ch>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamescallumyoung/pinata-publish-action/issues"
+  },
+  "homepage": "https://github.com/jamescallumyoung/pinata-publish-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1",
+    "@pinata/sdk": "^1.1.25"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.4",
+    "typescript": "^4.6.3"
+  }
+}
