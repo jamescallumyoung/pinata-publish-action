@@ -13,8 +13,8 @@ jobs:
         id: pin
         uses: ./ # Uses an action in the root directory
         with:
-          pinata-api-key: ${{ secrets.API_KEY }}
-          pinata-secret-api-key: ${{ secrets.API_SECRET }}
+          pinata-api-key: foo # ${{ secrets.API_KEY }}
+          pinata-secret-api-key: bar # ${{ secrets.API_SECRET }}
           file-to-pin: './package.json'
       # Use the output from the `pin` step
       - name: Get the timestamp
