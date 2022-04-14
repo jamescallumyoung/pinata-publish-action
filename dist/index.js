@@ -25735,21 +25735,21 @@ const sdk_1 = __importDefault(__nccwpck_require__(0));
 (function iife() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            console.log('Reading inputs...');
-            const apiKey = core_1.default.getInput('pinata-api-key');
-            const apiSecret = core_1.default.getInput('pinata-secret-api-key');
-            const fileToPin = core_1.default.getInput('file-to-pin');
-            console.log('Connecting to Pinata...');
+            core_1.default.info('Reading inputs...');
+            const apiKey = 'foob'; // core.getInput('pinata-api-key');
+            const apiSecret = 'barb'; // core.getInput('pinata-secret-api-key');
+            const fileToPin = 'package.json'; // core.getInput('file-to-pin');
+            core_1.default.info('Connecting to Pinata...');
             const pinata = (0, sdk_1.default)(apiKey, apiSecret);
             // Test connection. Throws if authentication fails.
-            console.log('Testing connection...');
+            core_1.default.info('Testing connection...');
             yield pinata.testAuthentication();
             const pinResult = yield pinata.pinFromFS(fileToPin);
-            console.log('Setting outputs...');
+            core_1.default.info('Setting outputs...');
             core_1.default.setOutput("hash", pinResult.IpfsHash);
             core_1.default.setOutput("pinSize", pinResult.PinSize);
             core_1.default.setOutput("timestamp", pinResult.Timestamp);
-            console.log('Done!');
+            core_1.default.info('Done!');
         }
         catch (error) {
             core_1.default.setFailed(JSON.stringify(error));
