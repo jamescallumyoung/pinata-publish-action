@@ -4,9 +4,9 @@ import pinataSDK from '@pinata/sdk';
 (async function iife() {
   try {
     console.log('Reading inputs...');
-    const apiKey = core.getInput('pinata-api-key');
-    const apiSecret = core.getInput('pinata-secret-api-key');
-    const fileToPin = core.getInput('file-to-pin');
+    const apiKey = 'foob'; // core.getInput('pinata-api-key');
+    const apiSecret = 'barb'; // core.getInput('pinata-secret-api-key');
+    const fileToPin = 'package.json'; // core.getInput('file-to-pin');
 
     console.log('Connecting to Pinata...');
     const pinata = pinataSDK(apiKey, apiSecret);
