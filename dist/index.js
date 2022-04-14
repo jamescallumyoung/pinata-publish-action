@@ -25747,7 +25747,7 @@ const sdk_1 = __importDefault(__nccwpck_require__(0));
             core_1.default.setOutput("timestamp", pinResult.Timestamp);
         }
         catch (error) {
-            core_1.default.setFailed(error === null || error === void 0 ? void 0 : error.message);
+            core_1.default.setFailed(JSON.stringify(error));
         }
     });
 })();

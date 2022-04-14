@@ -19,6 +19,6 @@ import pinataSDK from '@pinata/sdk';
     core.setOutput("timestamp", pinResult.Timestamp);
   }
   catch (error: any) {
-    core.setFailed(error?.message);
+    core.setFailed(JSON.stringify(error));
   }
 })();
