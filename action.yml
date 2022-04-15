@@ -1,4 +1,6 @@
 name: 'Pin with Pinata'
+icon: 'share-2'
+color: 'purple'
 description: 'Pin content to the IPFS using Pinata.'
 inputs:
   pinata-api-key:
