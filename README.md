@@ -1,13 +1,14 @@
 # Pinata Publish Action
 
-> A GitHUb ACtion for publishing files to the IPFS using Pinata.
+> A GitHub Action for publishing files to the IPFS using Pinata.
 
 Pinata is an IPFS gateway and pinning service. This GitHub Action uses
-their API to pin files to the IPFS.
+the Pinata API to pin files to the IPFS.
 
 ## How to use this Action
 
-Create a workflow file, using the action. An example follows:
+Create a workflow file, using the action. An example using GitHub Secrets to
+store the Pinata API Key and Secret API Key follows:
 
 ```yml
 jobs:
@@ -27,6 +28,3 @@ jobs:
       - name: Get the hash
         run: echo "The hash of the pin is ${{ steps.pin.outputs.hash }}"
 ```
-
-In the example above, we use GitHub Secrets to store the Pinata API Key
-and Secret API Key.
