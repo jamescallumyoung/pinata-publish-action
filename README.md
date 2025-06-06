@@ -1,3 +1,7 @@
+> Deprecated in favor of `ipfs-deploy-action` by Interplanetary Shipyard. Their action provides the same functionality and more.
+>
+> Use https://github.com/ipshipyard/ipfs-deploy-action instead.
+
 # Pinata Publish Action
 
 > A GitHub Action for publishing files to the IPFS using Pinata.
